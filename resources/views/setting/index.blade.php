@@ -51,7 +51,7 @@
                             <div class="tampil-logo"></div>
                         </div>
                     </div>
-                    <div class="form-group row">
+                    {{-- <div class="form-group row">
                         <label for="path_kartu_member" class="col-lg-2 control-label">Kartu Member</label>
                         <div class="col-lg-4">
                             <input type="file" name="path_kartu_member" class="form-control" id="path_kartu_member"
@@ -60,7 +60,7 @@
                             <br>
                             <div class="tampil-kartu-member"></div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="form-group row">
                         <label for="diskon" class="col-lg-2 control-label">Diskon</label>
                         <div class="col-lg-2">
@@ -138,7 +138,7 @@
                 $('.logo-lg').text(response.nama_perusahaan);
 
                 $('.tampil-logo').html(`<img src="{{ url('/') }}${response.path_logo}" width="200">`);
-                $('.tampil-kartu-member').html(`<img src="{{ url('/') }}${response.path_kartu_member}" width="300">`);
+                // $('.tampil-kartu-member').html(`<img src="{{ url('/') }}${response.path_kartu_member}" width="300">`);
                 $('[rel=icon]').attr('href', `{{ url('/') }}/${response.path_logo}`);
             })
             .fail(errors => {
